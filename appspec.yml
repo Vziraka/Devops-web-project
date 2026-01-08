@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
- - source: devops-web-project.war  # Removed /target/
+ - source: target/devops-web-project.war  # Removed /target/
    destination: /usr/share/tomcat/webapps/
 hooks:
  BeforeInstall:
