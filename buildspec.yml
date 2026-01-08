@@ -25,8 +25,8 @@ artifacts:
 
 artifacts:
   files:
-    - target/devops-web-project.war
-    - appspec.yml
-    - scripts/**/*
+    - appspec.yml          # Found in your GitHub root
+    - scripts/**/* # Found in your GitHub root
+    - target/devops-web-project.war  # Found in the target folder after build
   discard-paths: no
 
