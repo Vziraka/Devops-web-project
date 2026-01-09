@@ -17,16 +17,13 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Packaging artifacts...
+      - chmod +x scripts/*.sh  # IMPORTANT: Fixes permissions before zipping
       - mvn package -s settings.xml
-artifacts:
-  files:
-    - target/*.war
-  discard-paths: no
 
 artifacts:
   files:
-    - appspec.yml          # Found in your GitHub root
-    - scripts/**/* # Found in your GitHub root
-    - target/devops-web-project.war  # Found in the target folder after build
+    - appspec.yml
+    - scripts/**/*
+    - target/devops-web-project.war
   discard-paths: no
 
